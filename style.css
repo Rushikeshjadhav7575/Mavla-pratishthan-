@@ -785,3 +785,55 @@ button {
     opacity: 1;
     transform: translateY(0);
 }
+/* =========================================================
+   MOBILE WIDTH & NAVBAR FIX
+   ========================================================= */
+
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+main,
+section,
+.hero {
+    width: 100%;
+    max-width: 100%;
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .nav-container {
+        width: 92%;
+        max-width: 100%;
+    }
+
+    .nav-menu {
+        width: 92%;
+        max-width: 92%;
+        left: 4%;
+    }
+
+    .hero {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero-content {
+        width: 92%;
+        max-width: 100%;
+    }
+
+    .section {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
