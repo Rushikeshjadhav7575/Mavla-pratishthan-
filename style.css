@@ -1,12 +1,12 @@
 /* =========================================================
    MAVLA PRATISHTHAN
-   Premium Ganpati Mandal Website
-   COMPLETE STYLE.CSS
+   COMPLETE CLEAN RESPONSIVE CSS
    ========================================================= */
 
-/* =========================
+
+/* =========================================================
    RESET
-   ========================= */
+   ========================================================= */
 
 * {
     margin: 0;
@@ -16,29 +16,24 @@
 
 html {
     scroll-behavior: smooth;
-    width: 100%;
     overflow-x: hidden;
 }
 
 body {
     width: 100%;
-    max-width: 100%;
     min-height: 100vh;
-
-    margin: 0;
-    padding: 0;
 
     font-family: "Baloo 2", sans-serif;
 
-    background: #120b08;
+    background: #120805;
     color: #ffffff;
 
     overflow-x: hidden;
 }
 
 a {
-    text-decoration: none;
     color: inherit;
+    text-decoration: none;
 }
 
 button {
@@ -46,8 +41,8 @@ button {
 }
 
 img {
-    max-width: 100%;
     display: block;
+    max-width: 100%;
 }
 
 
@@ -62,16 +57,15 @@ img {
     left: 0;
 
     width: 100%;
-    max-width: 100%;
 
     z-index: 1000;
 
-    background: rgba(18, 11, 8, 0.84);
+    background: rgba(15, 7, 4, 0.92);
+
+    border-bottom: 1px solid rgba(255, 179, 0, 0.20);
 
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
-
-    border-bottom: 1px solid rgba(255, 166, 0, 0.18);
 
     transition:
         background 0.3s ease,
@@ -79,19 +73,22 @@ img {
 }
 
 .navbar.scrolled {
-    background: rgba(10, 5, 3, 0.97);
+    background: rgba(8, 4, 2, 0.98);
 
     box-shadow:
         0 8px 30px rgba(0, 0, 0, 0.35);
 }
 
 .nav-container {
-    width: min(1200px, 92%);
+    width: 92%;
+    max-width: 1200px;
+
     min-height: 78px;
 
-    margin: auto;
+    margin: 0 auto;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -99,12 +96,13 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    LOGO
-   ========================= */
+   ========================================================= */
 
 .logo {
     display: flex;
+
     align-items: center;
 
     gap: 12px;
@@ -129,6 +127,7 @@ img {
         serif;
 
     font-size: 22px;
+
     line-height: 1.1;
 }
 
@@ -143,12 +142,13 @@ img {
 }
 
 
-/* =========================
-   DESKTOP NAV
-   ========================= */
+/* =========================================================
+   DESKTOP NAVIGATION
+   ========================================================= */
 
 .nav-menu {
     display: flex;
+
     align-items: center;
 
     gap: 25px;
@@ -165,7 +165,8 @@ img {
 
     white-space: nowrap;
 
-    transition: 0.3s ease;
+    transition:
+        color 0.3s ease;
 }
 
 .nav-menu a::after {
@@ -183,23 +184,30 @@ img {
 
     background: #ff9d00;
 
-    transition: 0.3s ease;
+    transition:
+        width 0.3s ease;
 }
 
-.nav-menu a:hover,
+.nav-menu a:hover {
+    color: #ffb300;
+}
+
 .nav-menu a.active {
     color: #ffb300;
 }
 
-.nav-menu a:hover::after,
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
 .nav-menu a.active::after {
     width: 100%;
 }
 
 
-/* =========================
-   MENU BUTTON
-   ========================= */
+/* =========================================================
+   MOBILE MENU BUTTON
+   ========================================================= */
 
 .menu-btn {
     display: none;
@@ -212,7 +220,7 @@ img {
 
     flex-shrink: 0;
 
-    border: 1px solid rgba(255, 179, 0, 0.4);
+    border: 1px solid rgba(255, 179, 0, 0.45);
 
     border-radius: 10px;
 
@@ -224,11 +232,16 @@ img {
 
     cursor: pointer;
 
-    transition: 0.3s ease;
+    transition:
+        background 0.3s ease,
+        transform 0.3s ease;
 }
 
 .menu-btn:hover {
-    background: rgba(255, 179, 0, 0.1);
+    background:
+        rgba(255, 179, 0, 0.10);
+
+    transform: scale(1.05);
 }
 
 
@@ -240,8 +253,6 @@ img {
     position: relative;
 
     width: 100%;
-    max-width: 100%;
-
     min-height: 100vh;
     min-height: 100svh;
 
@@ -250,6 +261,9 @@ img {
     align-items: center;
     justify-content: center;
 
+    padding:
+        120px 20px 80px;
+
     text-align: center;
 
     overflow: hidden;
@@ -257,8 +271,8 @@ img {
     background:
         radial-gradient(
             circle at center,
-            rgba(150, 60, 0, 0.38),
-            transparent 45%
+            rgba(150, 60, 0, 0.42),
+            transparent 48%
         ),
         linear-gradient(
             135deg,
@@ -276,8 +290,8 @@ img {
 
     position: absolute;
 
-    left: -60px;
-    bottom: -60px;
+    left: -80px;
+    bottom: -110px;
 
     font-family: serif;
 
@@ -291,14 +305,14 @@ img {
 }
 
 
-/* Decorative flag */
+/* Decorative Flag */
 
 .hero::before {
     content: "🚩";
 
     position: absolute;
 
-    right: -50px;
+    right: -70px;
     top: 15%;
 
     font-size: 280px;
@@ -311,9 +325,9 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    HERO OVERLAY
-   ========================= */
+   ========================================================= */
 
 .hero-overlay {
     position: absolute;
@@ -322,7 +336,7 @@ img {
 
     background:
         linear-gradient(
-            rgba(0, 0, 0, 0.15),
+            rgba(0, 0, 0, 0.10),
             rgba(0, 0, 0, 0.55)
         );
 
@@ -330,39 +344,41 @@ img {
 }
 
 
-/* =========================
+/* =========================================================
    HERO CONTENT
-   ========================= */
+   ========================================================= */
 
 .hero-content {
     position: relative;
 
     z-index: 2;
 
-    width: min(900px, 92%);
-    max-width: 100%;
+    width: 92%;
+    max-width: 900px;
 
-    margin: auto;
+    margin: 0 auto;
 
     animation:
-        heroEnter 1.2s ease forwards;
+        heroEnter 1s ease forwards;
 }
 
 
-/* =========================
-   OM SYMBOL
-   ========================= */
+/* =========================================================
+   HERO SYMBOL
+   ========================================================= */
 
 .hero-symbol {
-    width: 75px;
-    height: 75px;
+    width: 76px;
+    height: 76px;
 
     margin: 0 auto 20px;
 
     display: grid;
+
     place-items: center;
 
-    border: 1px solid rgba(255, 179, 0, 0.55);
+    border:
+        1px solid rgba(255, 179, 0, 0.58);
 
     border-radius: 50%;
 
@@ -373,7 +389,1220 @@ img {
     font-size: 43px;
 
     box-shadow:
-        0 0 20px rgba(255, 140, 0, 0.25),
+        0 0 25px rgba(255, 140, 0, 0.25),
         inset 0 0 20px rgba(255, 140, 0, 0.08);
 
-    animation
+    animation:
+        floating 3s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   HERO TEXT
+   ========================================================= */
+
+.hero-small {
+    color: #ffb300;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+.hero h1 {
+    margin-top: 8px;
+
+    font-family:
+        "Tiro Devanagari Marathi",
+        serif;
+
+    font-size:
+        clamp(48px, 8vw, 90px);
+
+    line-height: 1.15;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffb300,
+            #ffe082,
+            #ff8f00
+        );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.hero h2 {
+    margin-top: 8px;
+
+    font-family:
+        "Tiro Devanagari Marathi",
+        serif;
+
+    font-size:
+        clamp(25px, 4vw, 40px);
+
+    color: #ffffff;
+}
+
+.hero-description {
+    margin-top: 12px;
+
+    color: #dddddd;
+
+    font-size: 19px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.hero-buttons {
+    margin-top: 35px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.btn {
+    min-width: 175px;
+
+    padding: 13px 24px;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 9px;
+
+    border-radius: 50px;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+.primary-btn {
+    background:
+        linear-gradient(
+            135deg,
+            #ffb300,
+            #ff7900
+        );
+
+    color: #180a04;
+
+    box-shadow:
+        0 8px 25px rgba(255, 128, 0, 0.25);
+}
+
+.primary-btn:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 12px 32px rgba(255, 128, 0, 0.40);
+}
+
+.secondary-btn {
+    border:
+        1px solid rgba(255, 179, 0, 0.55);
+
+    background:
+        rgba(255, 255, 255, 0.03);
+
+    color: #ffca58;
+}
+
+.secondary-btn:hover {
+    transform: translateY(-4px);
+
+    background:
+        rgba(255, 179, 0, 0.10);
+}
+
+
+/* =========================================================
+   SCROLL DOWN
+   ========================================================= */
+
+.scroll-down {
+    position: absolute;
+
+    left: 50%;
+    bottom: 22px;
+
+    z-index: 3;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 5px;
+
+    color: #bbbbbb;
+
+    font-size: 13px;
+
+    transform: translateX(-50%);
+
+    animation:
+        scrollBounce 2s infinite;
+}
+
+
+/* =========================================================
+   COMMON SECTIONS
+   ========================================================= */
+
+.section {
+    width: 100%;
+
+    padding:
+        100px 5%;
+}
+
+.section-heading {
+    margin-bottom: 55px;
+
+    text-align: center;
+}
+
+.section-heading span {
+    color: #ffb300;
+
+    font-size: 17px;
+
+    font-weight: 600;
+}
+
+.section-heading h2 {
+    margin-top: 6px;
+
+    font-family:
+        "Tiro Devanagari Marathi",
+        serif;
+
+    font-size:
+        clamp(34px, 5vw, 52px);
+
+    line-height: 1.2;
+}
+
+.heading-line {
+    width: 75px;
+    height: 3px;
+
+    margin: 15px auto 0;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff8f00,
+            #ffd54f,
+            #ff8f00
+        );
+}
+
+
+/* =========================================================
+   ABOUT
+   ========================================================= */
+
+.about {
+    background:
+        linear-gradient(
+            #1e0e08,
+            #120905
+        );
+}
+
+.about-content {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 1fr;
+
+    gap: 45px;
+
+    align-items: center;
+}
+
+.about-text {
+    color: #dddddd;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+}
+
+.about-text p + p {
+    margin-top: 18px;
+}
+
+.text-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    color: #ffb300;
+
+    font-size: 17px;
+
+    transition:
+        gap 0.3s ease;
+}
+
+.text-btn:hover {
+    gap: 16px;
+}
+
+.about-card {
+    padding: 40px 30px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(255, 179, 0, 0.18);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 140, 0, 0.08),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.about-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(255, 179, 0, 0.40);
+}
+
+.card-icon {
+    margin-bottom: 15px;
+
+    font-size: 55px;
+}
+
+.about-card h3 {
+    font-family:
+        "Tiro Devanagari Marathi",
+        serif;
+
+    font-size: 27px;
+
+    color: #ffb300;
+}
+
+.about-card p {
+    margin-top: 10px;
+
+    color: #cccccc;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   EVENTS
+   ========================================================= */
+
+.events {
+    background: #0d0705;
+}
+
+.event-placeholder {
+    width: 100%;
+    max-width: 800px;
+
+    margin: 0 auto;
+
+    padding: 55px 25px;
+
+    text-align: center;
+
+    border:
+        1px dashed rgba(255, 179, 0, 0.35);
+
+    border-radius: 25px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+}
+
+.event-icon {
+    font-size: 60px;
+
+    margin-bottom: 10px;
+}
+
+.event-placeholder h3 {
+    font-family:
+        "Tiro Devanagari Marathi",
+        serif;
+
+    font-size: 26px;
+}
+
+.event-placeholder p {
+    margin-top: 10px;
+
+    color: #aaaaaa;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   GALLERY
+   ========================================================= */
+
+.gallery {
+    background:
+        linear-gradient(
+            145deg,
+            #180b06,
+            #261007
+        );
+}
+
+.gallery-placeholder {
+    width: 100%;
+    max-width: 850px;
+
+    min-height: 250px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(255, 179, 0, 0.15);
+
+    border-radius: 25px;
+
+    background:
+        rgba(0, 0, 0, 0.18);
+}
+
+.gallery-placeholder i {
+    font-size: 55px;
+
+    color: #ffb300;
+}
+
+.gallery-placeholder h3 {
+    margin-top: 15px;
+
+    font-size: 23px;
+}
+
+.gallery-placeholder p {
+    margin-top: 8px;
+
+    color: #999999;
+}
+
+
+/* =========================================================
+   SOCIAL
+   ========================================================= */
+
+.social {
+    background: #0d0705;
+}
+
+.social-grid {
+    width: 100%;
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.social-card {
+    padding: 35px 25px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(255, 179, 0, 0.14);
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 140, 0, 0.08),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.social-card:hover {
+    transform: translateY(-8px);
+
+    border-color:
+        rgba(255, 179, 0, 0.45);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+.social-icon {
+    font-size: 45px;
+}
+
+.social-card h3 {
+    margin-top: 12px;
+
+    font-family:
+        "Tiro Devanagari Marathi",
+        serif;
+
+    font-size: 25px;
+}
+
+.social-card p {
+    margin-top: 8px;
+
+    color: #aaaaaa;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+.contact {
+    background:
+        linear-gradient(
+            145deg,
+            #211006,
+            #120805
+        );
+}
+
+.contact-content {
+    width: 100%;
+    max-width: 1050px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.contact-card {
+    padding: 35px 20px;
+
+    text-align: center;
+
+    border:
+        1px solid rgba(255, 179, 0, 0.14);
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.025);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+
+    border-color:
+        rgba(255, 179, 0, 0.40);
+}
+
+.contact-card i {
+    font-size: 30px;
+
+    color: #ffb300;
+}
+
+.contact-card h3 {
+    margin-top: 12px;
+
+    font-family:
+        "Tiro Devanagari Marathi",
+        serif;
+
+    font-size: 22px;
+}
+
+.contact-card p {
+    margin-top: 7px;
+
+    color: #999999;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    width: 100%;
+
+    padding:
+        60px 20px 25px;
+
+    text-align: center;
+
+    background: #080504;
+
+    border-top:
+        1px solid rgba(255, 179, 0, 0.12);
+}
+
+.footer-logo {
+    font-size: 45px;
+}
+
+.footer h2 {
+    margin-top: 8px;
+
+    font-family:
+        "Tiro Devanagari Marathi",
+        serif;
+
+    font-size: 30px;
+
+    color: #ffb300;
+}
+
+.footer p {
+    margin-top: 5px;
+
+    color: #aaaaaa;
+}
+
+.footer-line {
+    width: 70px;
+    height: 2px;
+
+    margin: 25px auto;
+
+    background: #ff9d00;
+}
+
+.copyright {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   IMPORTANT: YOUR JS USES THESE CLASSES
+   ========================================================= */
+
+.reveal {
+    opacity: 0;
+
+    transform:
+        translateY(35px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.revealed {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* =========================================================
+   ANIMATIONS
+   ========================================================= */
+
+@keyframes heroEnter {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+@keyframes floating {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-8px);
+    }
+}
+
+@keyframes scrollBounce {
+
+    0%,
+    100% {
+        transform:
+            translate(-50%, 0);
+    }
+
+    50% {
+        transform:
+            translate(-50%, 8px);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .nav-container {
+        min-height: 70px;
+
+        width: 92%;
+    }
+
+    /*
+       DESKTOP NAV HIDE
+    */
+
+    .nav-menu {
+        position: absolute;
+
+        top: 70px;
+        left: 4%;
+
+        width: 92%;
+
+        padding: 10px;
+
+        display: none;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+
+        background:
+            rgba(18, 8, 4, 0.98);
+
+        border:
+            1px solid rgba(255, 179, 0, 0.25);
+
+        border-radius: 16px;
+
+        box-shadow:
+            0 20px 50px rgba(0, 0, 0, 0.60);
+
+        overflow-y: auto;
+    }
+
+    /*
+       JS ADDS .show
+       SO MENU BECOMES VISIBLE
+    */
+
+    .nav-menu.show {
+        display: flex;
+    }
+
+    /*
+       HAMBURGER SHOW
+    */
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .nav-menu a {
+        width: 100%;
+
+        padding:
+            13px 15px;
+
+        border-radius: 10px;
+
+        font-size: 17px;
+
+        white-space: normal;
+    }
+
+    .nav-menu a::after {
+        display: none;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+        background:
+            rgba(255, 179, 0, 0.09);
+    }
+
+    /*
+       ABOUT
+    */
+
+    .about-content {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    /*
+       SOCIAL
+    */
+
+    .social-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    /*
+       CONTACT
+    */
+
+    .contact-content {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    /* NAVBAR */
+
+    .nav-container {
+        width: 92%;
+
+        min-height: 68px;
+
+        gap: 10px;
+    }
+
+    .logo {
+        min-width: 0;
+
+        gap: 8px;
+    }
+
+    .logo-icon {
+        font-size: 29px;
+    }
+
+    .logo strong {
+        font-size: 19px;
+    }
+
+    .logo small {
+        font-size: 10px;
+    }
+
+    .menu-btn {
+        width: 42px;
+        height: 42px;
+
+        font-size: 19px;
+    }
+
+    .nav-menu {
+        top: 68px;
+
+        left: 4%;
+
+        width: 92%;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100svh;
+
+        padding:
+            105px 15px 75px;
+    }
+
+    .hero-content {
+        width: 94%;
+    }
+
+    .hero-symbol {
+        width: 64px;
+        height: 64px;
+
+        margin-bottom: 16px;
+
+        font-size: 35px;
+    }
+
+    .hero-small {
+        font-size: 15px;
+    }
+
+    .hero h1 {
+        font-size:
+            clamp(40px, 12vw, 58px);
+
+        line-height: 1.2;
+    }
+
+    .hero h2 {
+        font-size:
+            clamp(23px, 6vw, 30px);
+
+        line-height: 1.3;
+    }
+
+    .hero-description {
+        font-size: 15px;
+
+        letter-spacing: 1.5px;
+
+        line-height: 1.7;
+    }
+
+
+    /* HERO BUTTONS */
+
+    .hero-buttons {
+        flex-direction: column;
+
+        gap: 13px;
+
+        margin-top: 28px;
+    }
+
+    .btn {
+        width: min(280px, 90%);
+
+        min-width: 0;
+    }
+
+
+    /* SECTIONS */
+
+    .section {
+        padding:
+            75px 5%;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .section-heading span {
+        font-size: 15px;
+    }
+
+    .section-heading h2 {
+        font-size:
+            clamp(32px, 9vw, 42px);
+    }
+
+
+    /* ABOUT */
+
+    .about-text {
+        font-size: 16px;
+
+        line-height: 1.8;
+    }
+
+    .about-card {
+        padding:
+            35px 22px;
+    }
+
+
+    /* EVENTS */
+
+    .event-placeholder {
+        padding:
+            45px 20px;
+    }
+
+    .event-placeholder h3 {
+        font-size: 22px;
+
+        line-height: 1.5;
+    }
+
+    .event-placeholder p {
+        font-size: 14px;
+
+        line-height: 1.8;
+    }
+
+
+    /* GALLERY */
+
+    .gallery-placeholder {
+        min-height: 220px;
+
+        padding:
+            30px 20px;
+    }
+
+    .gallery-placeholder h3 {
+        font-size: 20px;
+
+        line-height: 1.5;
+    }
+
+    .gallery-placeholder p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* SOCIAL */
+
+    .social-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .social-card {
+        padding:
+            30px 20px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-content {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .contact-card {
+        padding:
+            30px 18px;
+    }
+
+
+    /* DECORATIONS */
+
+    .hero::before {
+        font-size: 180px;
+
+        right: -80px;
+    }
+
+    .hero::after {
+        font-size: 250px;
+
+        left: -100px;
+    }
+}
+
+
+/* =========================================================
+   SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .logo-icon {
+        font-size: 26px;
+    }
+
+    .logo strong {
+        font-size: 17px;
+    }
+
+    .logo small {
+        font-size: 9px;
+    }
+
+    .hero h1 {
+        font-size: 39px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+
+        letter-spacing: 1px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .footer h2 {
+        font-size: 26px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONE
+   ========================================================= */
+
+@media (max-width: 360px) {
+
+    .nav-container {
+        width: 94%;
+    }
+
+    .logo {
+        gap: 6px;
+    }
+
+    .logo-icon {
+        font-size: 23px;
+    }
+
+    .logo strong {
+        font-size: 15px;
+    }
+
+    .logo small {
+        font-size: 8px;
+    }
+
+    .menu-btn {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .hero h1 {
+        font-size: 34px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .btn {
+        width: 95%;
+    }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
